@@ -1,5 +1,5 @@
 const form = document.getElementById('form-data');
-const imgBody = document.getElementById('image-trash');
+const imgBody = document.getElementById(`image-trash-01`);
 const nomesAgenda = [];
 const telefonesAgenda = [];
 const imagemLixeiraTabela = '<img src="./images/lixeira.png" alt="Lixeira" />'
@@ -48,6 +48,6 @@ function exibeListaAgenda(){
     }
 }
 
-/*imgBody.addEventListener('click', function(e){
-    console.log ("Hello!");
-})*/
+imgBody.addEventListener('click', function(e){
+    console.log("Hello-02");
+})
