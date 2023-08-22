@@ -6,13 +6,13 @@ $('form').on('submit',function(e){
     e.preventDefault();
     
     const taskUser = $('#text-user-form').val();
-    const novaDiv = $('<div class="items"></div>');
-    const novoItem = $('<li></li>').appendTo(novaDiv);
-    $(`<p>${taskUser}</p>`).appendTo(novoItem);
-    $(novaDiv).appendTo('ul');
+    const newDiv = $('<div class="items"></div>');
+    const newItem = $('<li></li>').appendTo(newDiv);
+    $(`<p>${taskUser}</p>`).appendTo(newItem);
+    $(newDiv).appendTo('ul');
     $('#text-user-form').val('');
 })
 
-$('div.items').on('click',function(){
+$('ul').on('click','div.items',function(){
     $(this).toggleClass("itemsSelected");
 })
