@@ -12,13 +12,19 @@
             <h1>Lista de tarefas</h1>
         </header>
         <form>
-            <input type="text" placeholder="Nome da Tarefa" required />
+            <input type="text" id="text-user-form" placeholder="Nome da Tarefa" required />
             <button id="create-task" type="submit">Cadastrar</button>
         </form>
         <ul>
-            <li>
-                <p>Item descritivo</p>
-            </li>
+            <div class="items">
+                <li><p>Limpar a casa</p></li>
+            </div>     
+            <div class="items">
+                <li><p>Limpar o terreno</p></li>
+            </div>  
+            <div class="items">
+                <li><p>Sair de casa</p></li>
+            </div>         
         </ul>
     </div>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
