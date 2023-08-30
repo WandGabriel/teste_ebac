@@ -5,7 +5,7 @@ function validaValores(num1, num2){
     num1 = parseFloat(num1);
     num2 = parseFloat(num2);
 
-    return num1 > num2;
+    return num2 > num1;
 
 }
 
@@ -17,8 +17,8 @@ formulario.addEventListener('submit', function(e){
     const primeiroNumero = document.getElementById ('first-number');
     const segundoNumero = document.getElementById ('second-number');
     const resultadovalidacao = validaValores(primeiroNumero.value, segundoNumero.value);
-    const mensagemRetornoTrue = `<b>Parabéns o número ${primeiroNumero.value} é maior!<b>`
-    const mensagemRetornoFalse = `<b>Refaça o teste novamente o ${primeiroNumero.value} não é maior!</b>`
+    const mensagemRetornoTrue = `<b>Parabéns o número ${segundoNumero.value} é maior!<b>`
+    const mensagemRetornoFalse = `<b>Refaça o teste novamente o ${segundoNumero.value} não é maior!</b>`
 
     if(resultadovalidacao){
         const mensagemSucesso = document.querySelector('.success-validation')
