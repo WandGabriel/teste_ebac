@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jo-Ken-Pô</title>
+    <link rel="stylesheet" href="../main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-header">
+            <h1>Jo-Ken-Pô</h1>
+        </div>
+        <div class="game-resultados">
+            <div class="game-rodadas">
+                <h2>Jogo: <span id="contagemRodadas"></span></h2>
+            </div>
+            <div class="player-resultado">
+                <div class="player-resultado">
+                    <h2>Player <span id="pontuacao-jogador">0</span> : <span id="pontuacao-cpu">0</span> CPU</h2>                    
+                </div>
+            </div>
+        </div> 
+        <div class="game-apresentacao">
+            <div class="game-apresentacao-jogador">
+                <img src="images/pedra.png" alt="">
+            </div>
+            <h2>VS</h2>
+            <div class="game-apresentacao-cpu">
+                <img src="images/papel.png" alt="">
+            </div>
+        </div>
+        <div class="game-escolha">
+            <h1>Escolha seu movimento</h1>
+            <div class="game-escolha-position">
+                <label>
+                    <input type="radio" onclick="resetar()" name="JoKenPo" value="pedra" checked>
+                    <button class="botao"><img src="images/pedra.png" alt=""></button>
+                </label>
+                <label>
+                    <input type="radio" onclick="resetar()" name="JoKenPo" value="papel" >
+                    <button class="botao"><img src="images/papel.png" alt=""></button>
+                </label>
+                <label>
+                    <input type="radio" onclick="resetar()" name="JoKenPo" value="tesoura">
+                    <button class="botao"><img src="images/tesoura.png" alt=""></button>
+                </label>
+            </div>
+        </div>
+        <div class="jogar">
+            <button class="botao-jogar">Jogar</button>
+            <button class="botao-resetar">Resetar</button>
+        </div>
+        <footer>
+            <h3>&copy; Desenvolvido por Wanderson Gabriel</h3>
+        </footer>
+    </div>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
