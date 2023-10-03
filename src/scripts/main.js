@@ -1,21 +1,15 @@
-const apresentacaoJogador = document.getElementById("game-apresentacao-jogador");
+const apresentacaoJogadaPlayer = document.querySelector(".game-apresentacao-jogador");
+const apresentacaoJogadaCPU = document.getElementById('game-apresentacao-cpu');
 
 let contadorRodadas = 0;
 let pontoUser = 0;
 let pontoCPU = 0;
 
-var jogadaPlayer = ""
+let jogadaPlayer = ""
 
 function resetar() {
     jogadaPlayer = document.querySelector('input[name="JoKenPo"]:checked').value
-    console.log(jogadaPlayer);
-    apresentacaoJogador.innerHTML = `<img src="${jogadaPlayer}.png alt=""/>`
+    apresentacao.innerHTML = `<img src="images/${jogadaPlayer}.png" alt=""/>`
     }
 
-contadorRodadas =+ 1;
-
 document.getElementById('contagemRodadas').innerHTML = contadorRodadas;
-
-let exemploJogada = ['pedra','papel','tesoura'];
-let numeroJogada = Math.floor(Math.random(exemploJogada)*exemploJogada.length);
- console.log(exemploJogada[numeroJogada]);
