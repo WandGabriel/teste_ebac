@@ -10,11 +10,12 @@
   margin: 0 auto;
   border-radius: 10px;
   margin-top: 100px;
-  border: 5px solid black;
+  border: 5px solid #0466c8;
 }
 .container .game-header h1 {
   padding: 16px;
-  background-color: #ccc;
+  background-color: #0466c8;
+  color: #fff;
 }
 .container .game-rodadas {
   font-size: 2em;
@@ -23,7 +24,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #f4f6f6;
+  background-color: #E8EAED;
 }
 .container .game-apresentacao img {
   max-width: 95%;
@@ -31,8 +32,11 @@
 .container .game-apresentacao h2 {
   font-size: 4em;
 }
-.container .game-apresentacao-cpu img {
+.container .reverse img {
   transform: scaleX(-1);
+}
+.container .game-escolha h1 {
+  color: #0466c8;
 }
 .container .game-escolha .game-escolha-position {
   display: flex;
@@ -51,10 +55,9 @@
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 2px solid black;
+  border: 2px solid #0466c8;
   cursor: pointer;
   transition: 0.3s;
-  background-color: gray;
 }
 .container .game-escolha [type=radio] {
   position: absolute;
@@ -65,12 +68,12 @@
   cursor: pointer;
 }
 .container .game-escolha [type=radio]:checked + button {
-  background-color: red;
+  background-color: #0466c8;
 }
-.container .botao-jogar,
-.container .botao-jogar:disabled:hover,
-.container .botao-resetar,
-.container .botao-resetar:disabled:hover {
+.container .jogar,
+.container .jogar:disabled:hover,
+.container .resetar,
+.container .resetar:disabled:hover {
   padding: 12px;
   text-transform: uppercase;
   cursor: pointer;
@@ -80,11 +83,17 @@
   font-size: 1em;
   transition: 0.3s;
   font-weight: bold;
+  border: 2px solid #0466c8;
+  color: #0466c8;
 }
-.container .botao-jogar:hover,
-.container .botao-jogar:disabled:hover:hover,
-.container .botao-resetar:hover,
-.container .botao-resetar:disabled:hover:hover {
-  background-color: red;
+.container .jogar:hover,
+.container .jogar:disabled:hover:hover,
+.container .resetar:hover,
+.container .resetar:disabled:hover:hover {
+  background-color: #0466c8;
   color: #fff;
+}
+footer {
+  margin-top: 16px;
+  color: #0466c8;
 }

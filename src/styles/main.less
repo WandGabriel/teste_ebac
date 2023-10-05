@@ -1,7 +1,10 @@
+@import 'variaveis';
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 .container {
@@ -11,7 +14,7 @@
     margin: 0 auto;
     border-radius: 10px;
     margin-top: 100px;
-    border: 5px solid black;
+    border: 5px solid @corDeBotao;
     
 
     .game-header {
@@ -19,7 +22,8 @@
         h1 {
            
             padding: 16px;
-            background-color: #ccc;
+            background-color: @corDeBotao;
+            color: @corDeTexto;
         }
     }
     
@@ -31,7 +35,7 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        background-color: #f4f6f6;
+        background-color: @corDeFundo;
 
         img {
             max-width: 95%;
@@ -42,7 +46,7 @@
         }
     }
 
-    .game-apresentacao-cpu {
+    .reverse {
         
         img {
             transform: scaleX(-1);            
@@ -50,6 +54,10 @@
     }
 
     .game-escolha {
+
+        h1 {
+            color: @corDeBotao;
+        }
 
         .game-escolha-position {
             display: flex;
@@ -72,10 +80,9 @@
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            border: 2px solid black;
+            border: 2px solid @corDeBotao;
             cursor: pointer;
             transition: .3s;
-            background-color: gray;
         }
         
         [type=radio] {
@@ -88,12 +95,12 @@
         }
 
         [type=radio]:checked + button {
-            background-color: red;
+            background-color: @corDeBotao;
         }
     }
 
-    .botao-jogar, .botao-jogar:disabled:hover,
-    .botao-resetar, .botao-resetar:disabled:hover {
+    .jogar, .jogar:disabled:hover,
+    .resetar, .resetar:disabled:hover {
         padding: 12px;
         text-transform: uppercase;
         cursor: pointer;
@@ -103,10 +110,17 @@
         font-size: 1em;
         transition: .3s;
         font-weight: bold;
+        border: 2px solid @corDeBotao;
+        color: @corDeBotao;
 
         &:hover {
-            background-color: red;
+            background-color: @corDeBotao;
             color: #fff;
         }
     }    
+}
+
+footer {
+    margin-top: 16px;
+    color: @corDeBotao;
 }
