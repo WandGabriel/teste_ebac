@@ -25,6 +25,7 @@
   justify-content: space-around;
   align-items: center;
   background-color: #E8EAED;
+  margin-bottom: 32px;
 }
 .container .game-apresentacao img {
   max-width: 95%;
@@ -35,6 +36,10 @@
 .container .reverse img {
   transform: scaleX(-1);
 }
+.container #game-apresentacao-jogador img,
+.container #game-apresentacao-cpu img {
+  max-width: 100%;
+}
 .container .game-escolha h1 {
   color: #0466c8;
 }
@@ -44,6 +49,7 @@
   width: 100%;
   align-items: center;
   position: relative;
+  margin-top: 32px;
 }
 .container .game-escolha .game-escolha-position img {
   max-width: 80%;

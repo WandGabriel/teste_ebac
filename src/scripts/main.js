@@ -49,6 +49,7 @@ function verificaGanhador(jogadaDoUsuario, jogadaDaCpu) {
 
 function contadorDeRodadas(rodada) {
     contadorRodadas = contadorRodadas + 1;
+    
 }
 
 function resetarJogo() {
