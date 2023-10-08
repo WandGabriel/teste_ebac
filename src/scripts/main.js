@@ -4,12 +4,14 @@ const jogar = document.getElementById('novaPartida');
 const resetarPontuacao = document.getElementById('resetarPontuacao');
 const pontuacaoJogador = document.getElementById('pontuacao-jogador');
 const pontuacaoCpu = document.getElementById('pontuacao-cpu');
+const pontuacaoEmpate = document.getElementById('pontuacao-empate')
 const listaDeJogada = ['pedra','papel','tesoura']
 const contagemJogos = document.getElementById('contagemRodadas');
 
 let contadorRodadas = 1;
 let pontoUser = 0;
 let pontoCPU = 0;
+let pontoEmpate = 0;
 
 
 let posicaoJogadaPlayer = "";
@@ -32,14 +34,16 @@ function salvarPosicaoJogada(numeroJogada) {
     posicaoJogadaPlayer = numeroJogada;
 }
 
-function exibePlacar(pontosUser, pontosCpu, contadorRodadas) {
+function exibePlacar(pontosUser, pontosCpu, pontoEmpate, contadorRodadas) {
     contagemJogos.innerHTML = contadorRodadas;
     pontuacaoJogador.innerHTML = pontosUser;
     pontuacaoCpu.innerHTML = pontosCpu;
+    pontuacaoEmpate.innerHTML = pontoEmpate;
 }
 
 function verificaGanhador(jogadaDoUsuario, jogadaDaCpu) {
     if (jogadaDoUsuario == jogadaDaCpu) {
+        pontoEmpate = pontoEmpate +1;
     } else if ((jogadaDoUsuario == 0)  && (jogadaDaCpu == 2) || (jogadaDoUsuario == 1 && jogadaDaCpu == 0) || (jogadaDoUsuario == 2 && jogadaDaCpu == 1)) {
         pontoUser = pontoUser + 1;
     } else {
@@ -56,7 +60,8 @@ function resetarJogo() {
     contadorRodadas = 1;
     pontoUser = 0;
     pontoCPU = 0;
-    exibePlacar(pontoUser, pontoCPU, contadorRodadas)
+    pontoEmpate = 0;
+    exibePlacar(pontoUser, pontoCPU, pontoEmpate, contadorRodadas)
 }
 
 jogar.addEventListener("click", function() {
@@ -64,7 +69,7 @@ jogar.addEventListener("click", function() {
     exibirJogadaPlayer();
     exibirJogadaCpu();
     verificaGanhador(posicaoJogadaPlayer,posicaoJogadaCPU);
-    exibePlacar(pontoUser,pontoCPU,contadorRodadas);
+    exibePlacar(pontoUser,pontoCPU,pontoEmpate,contadorRodadas);
 })
 
 resetarPontuacao.addEventListener("click", function() {
