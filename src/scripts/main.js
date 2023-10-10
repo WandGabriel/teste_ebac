@@ -27,7 +27,7 @@ function exibirJogadaPlayer() {
 function exibirJogadaCpu() {
     let exibirJogada = Math.floor(Math.random(listaDeJogada.length)*3);
     posicaoJogadaCPU = exibirJogada;
-    apresentacaoJogadaCPU.innerHTML = `<img src="images/${listaDeJogada[exibirJogada]}.png" alt="Ícone de ${listaDeJogada[exibirJogada]} do Jo-Ken-Pô" />`
+    apresentacaoJogadaCPU.innerHTML = `<img src="../src/images/${listaDeJogada[exibirJogada]}.png" alt="Ícone de ${listaDeJogada[exibirJogada]} do Jo-Ken-Pô" />`
 }
 
 function salvarPosicaoJogada(numeroJogada) {
