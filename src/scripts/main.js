@@ -19,7 +19,7 @@ let posicaoJogadaCPU = "";
 
 function exibirJogadaPlayer() {
     jogadaPlayer = document.querySelector('input[name="JoKenPo"]:checked').value;
-    apresentacaoJogadaPlayer.innerHTML = `<img src="images/${jogadaPlayer}.png" alt="Ícone de ${jogadaPlayer} do Jo-Ken-Pô"/>`
+    apresentacaoJogadaPlayer.innerHTML = `<img src="../src/images/${jogadaPlayer}.png" alt="Ícone de ${jogadaPlayer} do Jo-Ken-Pô"/>`
     let salvarJogada = listaDeJogada.indexOf(jogadaPlayer);
     salvarPosicaoJogada(salvarJogada);
 }
