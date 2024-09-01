@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
     const userLink = document.querySelector('#link');
 
 
-    const endpointGithub = `https://api.github.com/users/${loginDoUsario}/`;
+    const endpointGithub = `https://api.github.com/users/${loginDoUsario}`;
     
     fetch(endpointGithub)
         .then(function(respostaEndpoint){
